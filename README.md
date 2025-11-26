@@ -16,8 +16,6 @@ The final results are visualized through **interactive Tableau dashboards** that
 - Statistical & manual validation  
 - Tableau dashboards with category drilldowns and MoM metrics  
 
----
-
 ## **Technologies Used**
 
 ### **Programming**
