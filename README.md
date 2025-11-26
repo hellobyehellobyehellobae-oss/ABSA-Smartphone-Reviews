@@ -1,4 +1,4 @@
-# **Aspect-Based Sentiment Analysis of Smartphone Customer Reviews**
+ **Aspect-Based Sentiment Analysis of Smartphone Customer Reviews**
 
 This project is a **complete end-to-end cloud pipeline** that transforms **10,000 raw smartphone customer reviews** into structured, actionable insights using **LLM-powered Aspect-Based Sentiment Analysis (ABSA)**.  
 It combines **Google Cloud**, **Python**, and **Gemini 2.5 Pro** to extract aspects, classify sentiment, detect entities, and generate a clean analytical dataset.  
@@ -7,7 +7,7 @@ The final results are visualized through **interactive Tableau dashboards** that
 
 
 
-## **Key Features**
+ **Key Features**
 - End-to-end cloud-based text analytics pipeline  
 - Parallel batch processing using Cloud Run Jobs  
 - ABSA modeling with Gemini 2.5 Pro (aspects, sentiment, entities, categories)  
@@ -16,7 +16,7 @@ The final results are visualized through **interactive Tableau dashboards** that
 - Statistical & manual validation  
 - Tableau dashboards with category drilldowns and MoM metrics  
 
-## **Technologies Used**
+ **Technologies Used**
 
 ### **Programming**
 - **Python 3.10**
@@ -32,12 +32,10 @@ The final results are visualized through **interactive Tableau dashboards** that
 - **Cloud Logging**  
 - **BigQuery (log analysis only)**  
 
-### **Visualization**
-- **Tableau**
+**Visualization**
+**Tableau**
 
----
-
-## **Pipeline Flow**
+**Pipeline Flow**
 
 ### **1. Ingestion & Task Splitting**
 - Raw reviews uploaded to **GCS**
