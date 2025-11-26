@@ -7,7 +7,7 @@ The final results are visualized through **interactive Tableau dashboards** that
 
 
 
-## 🧠 **Key Features**
+## **Key Features**
 - End-to-end cloud-based text analytics pipeline  
 - Parallel batch processing using Cloud Run Jobs  
 - ABSA modeling with Gemini 2.5 Pro (aspects, sentiment, entities, categories)  
@@ -18,7 +18,7 @@ The final results are visualized through **interactive Tableau dashboards** that
 
 ---
 
-## 🛠 **Technologies Used**
+## **Technologies Used**
 
 ### **Programming**
 - **Python 3.10**
@@ -39,7 +39,7 @@ The final results are visualized through **interactive Tableau dashboards** that
 
 ---
 
-## 🔄 **Pipeline Flow**
+## **Pipeline Flow**
 
 ### **1. Ingestion & Task Splitting**
 - Raw reviews uploaded to **GCS**
