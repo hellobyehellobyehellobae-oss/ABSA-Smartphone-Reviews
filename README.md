@@ -4,6 +4,9 @@ This project is a **complete end-to-end cloud pipeline** that transforms **10,00
 It combines **Google Cloud**, **Python**, and **Gemini 2.5 Pro** to extract aspects, classify sentiment, detect entities, and generate a clean analytical dataset.  
 The final results are visualized through **interactive Tableau dashboards** that reveal sentiment trends, category breakdowns, and detailed aspect-level insights.
 
+## 📁 Repository Structure
+
+```
 project_root/
 ├── data_raw/
 │   └── review_data.csv
@@ -21,6 +24,7 @@ project_root/
 │
 └── analytics/
     └── EDA.ipynb
+```
 
 
  **Key Features**
