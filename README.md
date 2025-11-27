@@ -17,10 +17,11 @@ project_root
 │   ├── llm_processing
 │   │   ├── job1_aspects
 │   │   └── job2_categories
-│   ├── validation
+│   ├── llm_output_validation
 │   ├── merging
 │   ├── storage
-│   └── logging
+│   ├── logging
+│   └── final_dataset_validation
 │
 └── analytics
     └── 
