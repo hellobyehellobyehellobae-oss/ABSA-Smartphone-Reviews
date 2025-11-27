@@ -9,9 +9,7 @@ async def process_batch_sentiment(batch, model, semaphore, batch_id=None):
         return resolved_output
 
 
-# ----------------------------------------------------------
 # Run all batches asynchronously
-# ----------------------------------------------------------
 
 
 async def run_all_batches_sentiment(
@@ -34,9 +32,7 @@ async def run_all_batches_sentiment(
     return results
 
 
-# ----------------------------------------------------------
 # Entrypoint
-# ----------------------------------------------------------
 
 if __name__ == "__main__":
     nest_asyncio.apply()
