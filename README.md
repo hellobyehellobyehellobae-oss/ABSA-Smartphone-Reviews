@@ -7,23 +7,23 @@ The final results are visualized through **interactive Tableau dashboards** that
 ## Repository Structure
 
 ```
-project_root/
-├── data_raw/
+project_root
+├── data_raw
 │   └── review_data.csv
 │
-├── cloud_pipeline/
-│   ├── splitting/
-│   ├── batching/
-│   ├── llm_processing/
-│   │   ├── job1_aspects/
-│   │   └── job2_categories/
-│   ├── validation/
-│   ├── merging/
-│   ├── storage/
-│   └── logging/
+├── cloud_pipeline
+│   ├── splitting
+│   ├── batching
+│   ├── llm_processing
+│   │   ├── job1_aspects
+│   │   └── job2_categories
+│   ├── validation
+│   ├── merging
+│   ├── storage
+│   └── logging
 │
-└── analytics/
-    └── EDA.ipynb
+└── analytics
+    └── 
 ```
 
 
