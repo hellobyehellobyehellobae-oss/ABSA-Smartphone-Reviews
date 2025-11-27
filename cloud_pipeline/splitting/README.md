@@ -9,7 +9,7 @@ Uses the task’s index (CLOUD_RUN_TASK_INDEX) to select the specific chunk that
 
 Each task processes only its own chunk, which ensures:
 
-'''
+
 Simple overview
 full dataset
      ↓ split into N chunks
@@ -17,6 +17,3 @@ chunk_0 → task 0
 chunk_1 → task 1
 chunk_2 → task 2
  ...
-'''
-
-This module’s only purpose is to give each Cloud Run task its own portion of the dataset so the entire pipeline can run in parallel efficiently.
