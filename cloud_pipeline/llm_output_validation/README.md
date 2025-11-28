@@ -52,6 +52,14 @@ local index 0 → review_id 324
 local index 1 → review_id 325
 local index 3 → review_id 327
 ```
+Mapped Output Now:
+```
+{
+  324: {...},
+  325: {...},
+  327: {...}...
+}
+```
 ### 3. Retry Logic (max 3 retries)
 
 After gathering all invalid + missing rows, a mini-batch is created containing only those review_ids.
