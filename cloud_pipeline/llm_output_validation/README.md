@@ -23,10 +23,10 @@ Step 1
 
 ```
 local index → review_id
-0 →           324
-1 →           325
-2 →           326
-3 →           327
+0            324
+1            325
+2            326
+3            327
 ```
 
 ### 3. Retry Logic (max 3 retries)
