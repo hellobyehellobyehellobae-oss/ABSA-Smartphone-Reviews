@@ -19,7 +19,7 @@ This ensures the pipeline never accepts malformed JSON.
 ## 2. Missing-Row Detection
 
 ### Even if the model returns valid JSON, it may skip some reviews.
-Step 1
+Step 1 - Review Id Indexing
 
 ```
 local index → review_id
@@ -28,7 +28,22 @@ local index → review_id
 2            326
 3            327
 ```
-
+Step 2 - Reviews Indexing and Sent to the Model
+```
+0. "Great phone!"
+1. "Battery drains fast."
+2. "Camera is excellent."
+3. "Screen is too dim."
+```
+Step 3 - Model Output
+```
+{
+  "0": {...},          
+  "1": {...},          
+  "3": {...}...         
+  "2" is missing
+}
+```
 ### 3. Retry Logic (max 3 retries)
 
 After gathering all invalid + missing rows, a mini-batch is created containing only those review_ids.
