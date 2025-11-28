@@ -1,5 +1,5 @@
-### 1. Schema Validation (per-review validation)
-Goal:
+## 1. Schema Validation (per-review validation)
+### Goal:
 Guarantee that every returned object has:
 
 overall_sentiment
@@ -10,7 +10,7 @@ each aspect with:
 sentiment and summary
 
 \
-If a review does not match the schema:
+### If a review does not match the schema:
 
 that review is marked as invalid - its entry is removed from the batch output - it is added to the list of rows to retry
 
@@ -18,7 +18,7 @@ This ensures the pipeline never accepts malformed JSON.
 
 ## 2. Missing-Row Detection
 
-Even if the model returns valid JSON, it may skip some reviews.
+### Even if the model returns valid JSON, it may skip some reviews.
 The pipeline checks this by comparing:
 
 all expected review_ids in the batch
