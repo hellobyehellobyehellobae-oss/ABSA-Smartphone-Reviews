@@ -60,6 +60,16 @@ Mapped Output Now:
   327: {...}...
 }
 ```
+Step 5 - Missing-Row Detection
+```
+expected review_ids in batch:
+[324, 325, 326, 327,...]
+
+Mapped output contains:
+[324, 325, 327,...]
+```
+Final Missing List
+```[326,...]```
 ### 3. Retry Logic (max 3 retries)
 
 After gathering all invalid + missing rows, a mini-batch is created containing only those review_ids.
