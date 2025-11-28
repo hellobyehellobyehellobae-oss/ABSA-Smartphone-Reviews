@@ -9,7 +9,7 @@ aspects (a list)
 each aspect with:
 sentiment and summary
 
-\
+
 ### If a review does not match the schema:
 
 that review is marked as invalid - its entry is removed from the batch output - it is added to the list of rows to retry
