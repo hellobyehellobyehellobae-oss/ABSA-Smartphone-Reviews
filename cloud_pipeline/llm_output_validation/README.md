@@ -116,8 +116,5 @@ a dictionary of valid review_id → extracted data
 
 (optionally) some missing rows if they failed all retries
 
-The batch output is appended to all_results, and later merged across tasks.
+### The batch output is appended to all_results, and later merged across tasks.
 
-✔ The system ensures maximum completeness without stalling the entire job.
-✔ Only specific failed rows are lost, not whole batches.
-✔ This keeps the pipeline robust in real-world LLM usage.
