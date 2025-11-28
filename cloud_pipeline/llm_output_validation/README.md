@@ -16,7 +16,7 @@ that review is marked as invalid - its entry is removed from the batch output - 
 
 This ensures the pipeline never accepts malformed JSON.
 
-### 2. Missing-Row Detection
+## 2. Missing-Row Detection
 
 Even if the model returns valid JSON, it may skip some reviews.
 The pipeline checks this by comparing:
