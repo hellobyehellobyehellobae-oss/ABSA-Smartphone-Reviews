@@ -33,43 +33,43 @@ It does **not** perform retries or schema checks — those belong to llm_output_
 
 #### 1. Local indexing inside the batch
 Before sending a batch to the LLM, each review is temporarily assigned a local index:
-
+```
 local_map = {
     0: 145233,
     1: 145234,
     2: 145235
 }
-
+```
 And the prompt is built like:
-
+```
 0. "Battery life great"
 1. "Camera terrible"
 2. "Screen cracked"
-
+```
 The LLM always returns JSON keyed by **0, 1, 2**.
 
 ---
 
 #### 2. Model output (local indices)
 Example LLM output:
-
+```
 {
   "0": {...},
   "1": {...},
   "2": {...}
 }
-
+```
 ---
 
 #### 3. Merge back into global review IDs
 We convert local indices back to real review IDs:
-
+```
 resolved_output = {
     145233: output["0"],
     145234: output["1"],
     145235: output["2"]
 }
-
+```
 ---
 
 #### Main Idea
