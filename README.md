@@ -16,7 +16,7 @@ project_root
 │   ├── batching
 │   ├── llm_processing
 │   │   ├── aspects_extraction
-│   │   └── job2_categories
+│   │   └── high\main category
 │   ├── llm_output_validation
 │   ├── merging
 │   ├── storage
