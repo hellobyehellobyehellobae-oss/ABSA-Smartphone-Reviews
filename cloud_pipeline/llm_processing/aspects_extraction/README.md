@@ -1,6 +1,6 @@
 ### LLM Processing
 
-This section is responsible for initial aspects extraction from raw reviews and
+This section is responsible for initial aspects extraction from raw reviews and /
 explains how each Cloud Run task interacts with the LLM (Gemini 2.5 Pro) to extract structured information from raw customer reviews.
 
 The focus here is on the conceptual flow — how prompts are built, how batches are processed, and how outputs are mapped — without going into validation or missing-row logic (which is handled separately in the llm_output_validation module).
