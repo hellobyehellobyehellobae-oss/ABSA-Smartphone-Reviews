@@ -15,7 +15,7 @@ project_root
 │   ├── splitting
 │   ├── batching
 │   ├── llm_processing
-│   │   ├── job1_aspects
+│   │   ├── aspects_extraction
 │   │   └── job2_categories
 │   ├── llm_output_validation
 │   ├── merging
