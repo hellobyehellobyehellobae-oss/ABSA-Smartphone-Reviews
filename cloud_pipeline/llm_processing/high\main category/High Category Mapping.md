@@ -1,6 +1,7 @@
 ready_df = df[["row_id", "aspect_summary"]]
 ###############################################################
-
+\
+```
 categorisation_prompt_raw = """
 You are a text classification assistant.  
 Classify each customer review into **exactly one** of the following high-level categories:
@@ -15,7 +16,7 @@ Classify each customer review into **exactly one** of the following high-level c
    but **do not mention a specific feature or service**.  
    Examples: "Good phone", "Worst phone ever", "Awesome product", "Very bad", "Love it", "Not worth it."
 
----
+
 
 **Important rules**:
 - If a review only expresses general sentiment (positive/negative) or mentions the word “phone” or “product” **without describing a specific feature**, classify it as **GENERAL_FEEDBACK**.  
@@ -28,3 +29,4 @@ Return the results in **valid JSON format** without extra text.
 Here are the reviews to classify:
 {reviews}
 """
+```
