@@ -29,54 +29,53 @@ It does **not** perform retries or schema checks — those belong to llm_output_
 
 ### How prompting works
 
-Each batch of reviews is converted into a numbered text list:
+### How Review ID Mapping Works
 
-0. review text...
-1. review text...
-2. review text...
-…
+#### 1. Local indexing inside the batch
+Before sending a batch to the LLM, each review is temporarily assigned a local index:
 
-The prompt template then places this text inside a structured instruction that describes the exact JSON format the model must return. The model receives one batch at a time.
+local_map = {
+    0: 145233,
+    1: 145234,
+    2: 145235
+}
 
-The output from the LLM is a single JSON dictionary where:
-- Keys represent batch-local indices  
-- Values contain aspect-level sentiment analysis for each review
+And the prompt is built like:
 
-Example model output (conceptual):
+0. "Battery life great"
+1. "Camera terrible"
+2. "Screen cracked"
+
+The LLM always returns JSON keyed by **0, 1, 2**.
+
+---
+
+#### 2. Model output (local indices)
+Example LLM output:
 
 {
-  "0": { structured json for review 0 },
-  "1": { structured json for review 1 },
-  ...
+  "0": {...},
+  "1": {...},
+  "2": {...}
 }
 
 ---
 
-### Mapping model output back to reviews
+#### 3. Merge back into global review IDs
+We convert local indices back to real review IDs:
 
-Because the LLM output uses batch-local indices (0, 1, 2...), these indices are mapped back to the original review IDs so the final dataset remains consistent across all Cloud Run tasks.
-
-Mapping ensures:
-- Each review keeps its correct identifier
-- Downstream validation and merging work reliably
-- No mixing or shuffling of reviews can occur
-
----
-
-### Why this module is separate
-
-The LLM processing module focuses only on producing clean, structured outputs from Gemini.
-
-Other concerns — such as:
-- validating the schema,
-- detecting missing rows,
-- retrying invalid or incomplete entries,
-
-are intentionally handled in the `llm_output_validation` module to keep responsibilities clean and maintainable.
+resolved_output = {
+    145233: output["0"],
+    145234: output["1"],
+    145235: output["2"]
+}
 
 ---
 
-### Summary
+#### Main Idea
+Local indices make the prompt simple for the LLM, and the mapping ensures the final structured output is restored to the correct original `review_id` values.
+
+
 
 The LLM Processing module is the core transformation step of the pipeline.  
 Its purpose is to convert raw text → structured JSON using a deterministic prompt and a consistent output mapping system.
