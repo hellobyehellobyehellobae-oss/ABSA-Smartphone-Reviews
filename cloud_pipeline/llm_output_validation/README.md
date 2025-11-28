@@ -41,7 +41,8 @@ Step 3 - Model Output
   "0": {...},          
   "1": {...},          
   "3": {...}...         
-  "2" is missing
+
+"2" is missing
 }
 ```
 ### 3. Retry Logic (max 3 retries)
