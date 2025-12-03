@@ -18,11 +18,13 @@ project_root
 │   │   ├── aspects_extraction
 │   │   └── high\main category
 │   ├── llm_output_validation
+│   │   ├── semantical_validation
+│   │   └── semantical_validation
 │   ├── storage
 │   ├── merging
 │   ├── logging
 │   ├── final_dataset_validation
-│   │   └── semantical_validation
+│   │   ├── semantical_validation
 │   │   └── statistical_validation
 |   └── full_script_flow
 │
