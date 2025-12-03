@@ -18,8 +18,8 @@ project_root
 │   │   ├── aspects_extraction
 │   │   └── high\main category
 │   ├── llm_output_validation
-│   ├── merging
 │   ├── storage
+│   ├── merging
 │   ├── logging
 │   └── final_dataset_validation
 │
