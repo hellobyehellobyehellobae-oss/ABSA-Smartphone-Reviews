@@ -19,7 +19,7 @@ project_root
 │   │   └── high\main category
 │   ├── llm_output_validation
 │   │   ├── aspect_extraction_validation
-│   │   └── aspect_extraction_validation
+│   │   └── high\main_category_validation
 │   ├── storage
 │   ├── merging
 │   ├── logging
