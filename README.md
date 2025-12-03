@@ -8,9 +8,8 @@ The final results are visualized through **interactive Tableau dashboards** that
 
 ```
 project_root
-├── data_raw
-│   └── review_data.csv
-│
+├── data
+│   
 ├── cloud_pipeline
 │   ├── splitting
 │   ├── batching
@@ -28,7 +27,6 @@ project_root
 │       ├── semantical_validation
 │       └── statistical_validation
 |    
-│
 └── analytics
     └── 
 ```
