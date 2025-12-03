@@ -22,6 +22,7 @@ project_root
 │   ├── merging
 │   ├── logging
 │   └── final_dataset_validation
+|   └── full_script_flow
 │
 └── analytics
     └── 
