@@ -21,7 +21,7 @@ project_root
 │   ├── storage
 │   ├── merging
 │   ├── logging
-│   └── final_dataset_validation
+│   ├── final_dataset_validation
 │   │   └── semantical_validation
 │   │   └── statistical_validation
 |   └── full_script_flow
