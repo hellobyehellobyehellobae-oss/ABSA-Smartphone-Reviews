@@ -78,7 +78,6 @@ Local indices make the prompt simple for the LLM, and the mapping ensures the fi
 
 
 
-The LLM Processing module is the core transformation step of the pipeline.  
 Its purpose is to convert raw text → structured JSON using a deterministic prompt and a consistent output mapping system.
 
 It does **not** validate, retry, or filter the results — it only produces the initial structured output for each batch.
